@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <ul>
+        <li><h2>los valores repetidos seran obviados</h2></li>
+        <li><h2>los valores Menores que 0 Seran iguales a 0</h2></li>
+        <li><h2>Si ningun valor es insertado sera igualado a 0</h2></li>
+        <a href="p3.html"> <Button>ir a la parte 3 </Button></a>
+    </ul>
+   
+
+    <script>
+       var x = [];
+       var pivot;
+        var i;
+        
+        for(i = 1; i < 4; i++){
+            pivot = prompt(" Ingrese un valor: ");
+            n = parseInt(pivot);
+            if ( n < 0 || isNaN(n)){
+                n = 0;
+                x.push(n)
+            }
+            else x.push(n)
+            document.write("Lenght of " +n+ "  is  "  + n.toString().length);
+            document.write("<br>");
+        };
+        const uniqueSet = new Set(x);
+        const backToArray = [...uniqueSet]
+        var Minimo = Math.min(...uniqueSet);
+        var Maximo = Math.max(...uniqueSet);
+        
+        document.write("<br>");
+        document.write("numeros insertados:  ", backToArray.join(' ,')); 
+        document.write("<br>");
+        document.write("Menor valor:  ", Minimo);
+        document.write("<br>");
+        document.write("Mayor valor:  ", Maximo);
+        document.write("<br>");
+   </script>
+</body>
+</html>
